@@ -59,6 +59,7 @@ export default class ImageColorPicker extends Component {
         ref={imageColorPickerView => (this.imageColorPickerView = imageColorPickerView)}
         source={{ html: canvasHtml(this.state.imageBlob, this.props) }}
         javaScriptEnabled={true}
+        androidHardwareAccelerationDisabled
         onMessage={event => { pickerCallback(event); } }
         style={pickerStyle}
       />
